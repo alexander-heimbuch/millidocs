@@ -1,0 +1,95 @@
+---
+---
+@import 'variables';
+
+html, body {
+	margin: 0;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden
+}
+
+* {
+	box-sizing: border-box
+}
+
+pre {
+	margin-bottom: ($base-height * 2) !important;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover {
+		color:#008cff;
+		text-decoration:none
+	}
+}
+
+.wrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden
+}
+
+.sidebar {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: $sidebar-width;
+	padding: ($base-height * 2) 0 $base-height 0;
+	background: #fafafa;
+	border-right: 1px solid rgba(0,0,0,0.07);
+	height: 100%;
+	overflow: hidden;
+	color: #364149
+}
+
+.content {
+	display: block;
+	position: absolute;
+	min-height: 100%;
+	height: 100%;
+	overflow-y: auto;
+	width: calc(100% - #{$sidebar-width});
+	left: $sidebar-width;
+	color: #333;
+	line-height: 1.7;
+	word-wrap: break-word
+}
+
+.navigation {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		display: block;
+		padding: 10px 15px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&.active {
+			color:#008cff;
+		}
+	}
+}
+
+.inner {
+	max-width: $content-width;
+	margin: 0 auto;
+	padding: $base-height ($base-height * 2) ($base-height * 3) $base-height
+}
+
+.section {
+	margin-bottom: $base-height;
+}
