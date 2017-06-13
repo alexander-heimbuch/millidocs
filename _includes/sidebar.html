@@ -1,22 +1,11 @@
-{% capture html %}
-<sidebar class="sidebar">
-	<ul class="navigation">
-		{% assign entries = site.pages | sort: "navigation" %}
-
-		{% for entry in entries %}
-
-			{% capture slug    %}{{ entry.url | split: "/"   | last                       }}{% endcapture %}
-			{% capture current %}{{ entry.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
-
-
-			{% if current == include.context and entry.navigation %}
-				<li>
-					<a class="{% if page.url == entry.url entry.url %}active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
-						{{ entry.title }}
-					</a>
-				</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
+<sidebar class="sidebar" id="sidebar">
+	<div class="sidebar-mobile">
+		<img src="{{ "/assets/images/menu.svg" | relative_url }}" class="menu-icon" id="menu" />
+		<img src="{{ "/assets/images/close.svg" | relative_url }}" class="close-icon" id="close" />
+	</div>
+	{% include search.html %}
+	<div class="sidebar-main">
+		{% include navigation.html %}
+		{% include search-results.html %}
+	</div>
 </sidebar>
-{% endcapture %}{{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}

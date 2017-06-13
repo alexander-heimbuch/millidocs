@@ -1,6 +1,5 @@
 title: Podlove Web Player v4 Documentation
 description: Home of CommerceCloud UIs
-baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://docs.podlove.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -8,8 +7,12 @@ markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
     disable : true
-theme: minima
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
+sass:
+  sass_dir: _sass
+  style: compressed
