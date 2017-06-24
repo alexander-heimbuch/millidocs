@@ -32,18 +32,18 @@
 
 	function resultEntry(result) {
 		var searchEntry = $('<li />')
-		var searchTitle = $('<a />')
+		var searchLink = $('<a />')
 
 		var categoryPath = result.url.split('/')
 		categoryPath.shift()
 		categoryPath.pop()
 
 		searchEntry
-			.append(searchTitle)
+			.append(searchLink)
 
-		searchEntry.attr('href', result.href)
+		searchLink.attr('href', result.href)
 
-		searchTitle.text(result.title)
+		searchLink.text(result.title)
 
 		return searchEntry
 	}

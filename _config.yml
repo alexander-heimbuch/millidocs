@@ -1,6 +1,6 @@
-title: Podlove Web Player v4 Documentation
-description: Home of CommerceCloud UIs
-url: "https://docs.podlove.org" # the base hostname & protocol for your site, e.g. http://example.com
+title: Millidocs Theme
+description: Documentation for small projects
+url: "https://github.com/alexander-heimbuch/millidocs" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown

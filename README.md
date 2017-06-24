@@ -1,21 +1,34 @@
-# milligram-docs
+# Millidocs Theme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+Simple documentation theme for Jekyll featuring [Milligram CSS framework](http://milligram.io/), [PrismJS syntax highlighter](http://prismjs.com/) and [LunrJS search](https://lunrjs.com/).
 
-TODO: Delete this and the text above, and describe your gem
+One of the core features is a full text client side search and full responsiveness. It has zero dependencies with other gems and should be easily build with Github.
 
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "milligram-docs"
+gem "millidocs"
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+Adapt your Jekyll site config `_config.yml`:
 
 ```yaml
-theme: milligram-docs
+  title: My Docs Page Title
+  description: MY description
+  url: "https://base/url/site"
+  theme: millidocs
+
+  markdown: kramdown
+  kramdown:
+    syntax_highlighter_opts:
+      disable : true
+
+  exclude:
+    - Gemfile
+    - Gemfile.lock
+    - README.md
 ```
 
 And then execute:
@@ -24,15 +37,31 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install milligram-docs
+    $ gem install millidocs
+
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+### Available Themes
 
-## Contributing
+This theme is made for _pages_ only and doesn't support _posts_ by default. So the only available layouts are `default` and `page`.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+### Navigation
+
+The navigation supports especially only one level. If you need deep nested structures you propably should use a larger documentation system like [GitBook](https://www.gitbook.com/).
+
+Not every page by default is part of the navigation. If you want to add a page to the navigation you have to add the `navigation` attribute with a desired `index`:
+
+```
+---
+layout: page
+title: Navigation
+navigation: 2
+---
+```
+
+The navigation `index` is starting with 1 representing the first item. 
+
 
 ## Development
 

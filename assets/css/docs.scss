@@ -113,21 +113,20 @@ a {
 
 // Content
 .content {
-	display: block;
+	display: flex;
+  justify-content: center;
 	min-height: 100%;
 	height: 100%;
+  width: 100%;
 	overflow-y: auto;
-	width: 80%;
 	color: $content-color;
 	line-height: 1.7;
 	word-wrap: break-word;
-	margin-top: $header-height;
 }
 
 .inner {
 	max-width: $content-width;
-	margin: 0 auto;
-	padding: 0 ($base-height * 2) ($base-height * 3) $base-height;
+	padding: $base-height ($base-height * 2) ($base-height * 3) $base-height;
 }
 
 .section {
