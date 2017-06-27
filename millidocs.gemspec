@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "millidocs"
-  spec.version       = "0.2.0"
+  spec.version       = "0.2.1"
   spec.authors       = ["Alexander Heimbuch"]
   spec.email         = ["github@heimbu.ch"]
 
