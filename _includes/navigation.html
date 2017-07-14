@@ -4,7 +4,7 @@
 	{% for entry in entries %}
 		{% if entry.navigation %}
 			<li>
-				<a class="{% if page.url == entry.url entry.url %}active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
+				<a class="{% if page.url == entry.url entry.url %}active{% endif %}" href="{{ entry.url | relative_url }}">
 					{{ entry.title }}
 				</a>
 			</li>
