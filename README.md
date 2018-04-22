@@ -42,6 +42,10 @@ Or install it yourself as:
 
 ## Usage
 
+### Github Pages
+
+You can use this theme by simply adding `remote_theme: alexander-heimbuch/millidocs` to your `_config.yml` (Thanks to @kogli for the hint).
+
 ### Available Themes
 
 This theme is made for _pages_ only and doesn't support _posts_ by default. So the only available layouts are `default` and `page`.
